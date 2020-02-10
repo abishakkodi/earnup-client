@@ -23,9 +23,10 @@ class InputWindow extends Component {
     handleSubmitChat(e) {
         e.preventDefault();
         let { message } = this.state;
+        const { name } = this.props;
         // TODO: Do some input validation/sanitization
         if (message) {
-            socket.emit('chat-message', message);
+            socket.emit('chat-message', { name, message });
             message = '';
             this.setState({ message });
         }

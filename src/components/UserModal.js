@@ -34,22 +34,18 @@ class UsernameModal extends Component {
 
     render() {
         return (
-            <div className={ this.props.isVisible? "hide" :"UserModal"}>
+            <div className={this.props.isVisible ? "hide" : "UserModal"}>
                 <form className="UserModal-Content">
-                    <div> Please Enter Username below </div>
+                    <div> HELLO my name is </div>
                     <input
                         type="text"
                         value={this.state.name}
                         onChange={this.handleInputChange}
                     />
-                    <button onClick={this.handleSubmitName}>
-                        Login
-                </button>
+                    <button onClick={this.handleSubmitName}> Login </button>
                 </form>
             </div>)
     }
-
-
 }
 
 

@@ -1,8 +1,9 @@
-.chat-component {
+.ChatWindow {
     height: 90vh;
 }
 
 .message-window {
+    margin-top: 20px;;
     height: 80vh;
     width: 90vw;
     overflow-x: hidden; 
@@ -10,9 +11,22 @@
 }
 
 .message {
+    padding: 3px 15px;
+}
+
+.message-content {
     text-align: left;
-    margin: 10px;
-    padding: 5px 15px;
     color: black;
     background-color: azure;
+    padding: 6px;
+    border-radius: 25px;
+}
+
+.message-user {
+    text-align: right;
+    margin: 10px;
+    color: black;
+    font-size: 15px;
+    color: white;
+    /* background-color: azure; */
 }

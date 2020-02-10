@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './ChatWindow.css';
 
-class ChatWindow extends Component {
+class ChatFeed extends Component {
     constructor(props) {
         super(props);
 
@@ -11,23 +11,25 @@ class ChatWindow extends Component {
     // scrollToBottom = () => {
     //     this.messagesEnd.scrollIntoView({ behavior: "smooth" });
     //   }
-      
+
     //   componentDidMount() {
     //     this.scrollToBottom();
     //   }
-      
+
     //   componentDidUpdate() {
     //     this.scrollToBottom();
     //   }
 
     render() {
         return (
-            <div className="chat-component">
+            <div className="ChatFeed">
                 <div className='message-window'>
                     {this.props.messages.map((message, index) => (
-                        <div key={index}
-                            className="message">
-                            {message}
+                        <div
+                            className="message"
+                            key={index}>
+                            <div className="message-content">  {message.message} </div>
+                            <div className="message-user"> {message.name} </div>
                         </div>
                     ))}
                 </div>
@@ -37,4 +39,4 @@ class ChatWindow extends Component {
     }
 }
 
-export default ChatWindow;
+export default ChatFeed;

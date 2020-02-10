@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import InputWindow from './InputWindow'
-import ChatWindow from './ChatWindow'
+import ChatFeed from './ChatFeed'
 import UserModal from './UserModal'
-import '../App.css';
+import './App.css';
 import socket from '../utils/socket';
 
 class App extends Component {
@@ -28,18 +28,17 @@ class App extends Component {
   }
 
   render() {
-    const loggedIn = this.state.name.length;
-
     return (
       <div className="App">
         <div className="App-title"> Earn Chat </div>
-        <ChatWindow
+        <ChatFeed
           messages={this.state.messages} />
 
         <UserModal
           isVisible={this.state.name}
           setName={this.setUsername} />
-        <InputWindow />
+        <InputWindow
+          name={this.state.name} />
       </div>
     );
   }
