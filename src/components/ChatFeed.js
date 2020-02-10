@@ -21,6 +21,7 @@ class ChatFeed extends Component {
     //   }
 
     render() {
+        const myName = this.props.name;
         return (
             <div className="ChatFeed">
                 <div className='message-window'>
@@ -28,7 +29,10 @@ class ChatFeed extends Component {
                         <div
                             className="message"
                             key={index}>
-                            <div className="message-content">  {message.message} </div>
+                            {message.name === myName ? 
+                            <div className="message-content-me">  {message.message} </div>
+                            : <div className="message-content">  {message.message} </div>}
+                            
                             <div className="message-user"> {message.name} </div>
                         </div>
                     ))}

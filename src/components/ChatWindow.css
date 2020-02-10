@@ -31,3 +31,11 @@
     font-size: 15px;
     color: white;
 }
+
+.message-content-me {
+    text-align: right;
+    color: black;
+    background-color: azure;
+    padding: 6px;
+    border-radius: 25px;
+}

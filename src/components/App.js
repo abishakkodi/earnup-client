@@ -10,7 +10,7 @@ class App extends Component {
     super();
     this.state = {
       messages: [],
-      name: 'test'
+      name: ''
     }
     this.setUsername = this.setUsername.bind(this);
   }
@@ -32,6 +32,7 @@ class App extends Component {
       <div className="App">
         <div className="App-title"> Earn Chat </div>
         <ChatFeed
+          name={this.state.name}
           messages={this.state.messages} />
 
         <UserModal
