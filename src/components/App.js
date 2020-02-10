@@ -10,7 +10,7 @@ class App extends Component {
     super();
     this.state = {
       messages: [],
-      name: ''
+      name: 'test'
     }
     this.setUsername = this.setUsername.bind(this);
   }

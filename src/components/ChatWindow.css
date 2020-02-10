@@ -4,14 +4,16 @@
 
 .message-window {
     margin-top: 20px;;
-    height: 80vh;
+    height: 75vh;
     width: 90vw;
     overflow-x: hidden; 
     overflow-y: scroll;
+    padding-left: 20px;
+
 }
 
 .message {
-    padding: 3px 15px;
+    padding-top: 3px;
 }
 
 .message-content {
@@ -24,9 +26,8 @@
 
 .message-user {
     text-align: right;
-    margin: 10px;
+    margin: 4px;
     color: black;
     font-size: 15px;
     color: white;
-    /* background-color: azure; */
 }

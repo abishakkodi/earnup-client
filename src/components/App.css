@@ -1,10 +1,10 @@
 .App {
   text-align: center;
-  background-color: #00AB61;
   height: 100vh;
 }
 
 .App-title {
-  font-size: 40px;
+  font-size: 50px;
+  color: white;
+  font-weight: 500;
 }
-

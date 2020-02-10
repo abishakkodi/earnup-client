@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './InputWindow.css';
 import socket from '../utils/socket';
 
 class InputWindow extends Component {
@@ -33,7 +34,8 @@ class InputWindow extends Component {
     }
 
     render() {
-        return (<div>
+        return (
+        <div className="InputWindow">
             <form>
                 <input
                     type="text"
@@ -41,7 +43,7 @@ class InputWindow extends Component {
                     onChange={this.handleInputChange}
                 />
                 <button onClick={this.handleSubmitChat}>
-                    Send Chat
+                    Send Message
                 </button>
             </form>
         </div>)
