@@ -2,11 +2,7 @@ import React, { Component } from 'react';
 import './ChatWindow.css';
 
 class ChatFeed extends Component {
-    constructor(props) {
-        super(props);
-
-    }
-
+    
     // TODO: Debug why scroll behavior is not working
     // scrollToBottom = () => {
     //     this.messagesEnd.scrollIntoView({ behavior: "smooth" });
