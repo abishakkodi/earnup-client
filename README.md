@@ -2,6 +2,8 @@ Live site [HERE](https://tender-tesla-3a8ec9.netlify.com/).
 
 Open multiple windows to talk to yourself!
 
+To run locally, clone, install packages and run `npm run start`
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Current Issues: 
