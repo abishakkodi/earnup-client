@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
-import Main from './Main';
+import InputWindow from './InputWindow'
+import ChatWindow from './ChatWindow'
+import UserModal from './UserModal'
 import '../App.css';
 import socket from '../utils/socket';
 
@@ -8,45 +9,37 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      messages: []
+      messages: [],
+      name: ''
     }
+    this.setUsername = this.setUsername.bind(this);
   }
 
-  componentDidMount(){
+  setUsername(name) {
+    this.setState(() => ({ name }));
+  }
+
+  componentDidMount() {
     socket.on('chat-message', (msg) => {
-      console.log('C DID MOUNT SOCKET FIRE');
       let { messages } = this.state;
       messages.push(msg);
-      this.setState({ messages});
+      this.setState({ messages });
     });
   }
 
   render() {
+    const loggedIn = this.state.name.length;
+
     return (
       <div className="App">
-        <header className="App-header">
-        <Main />
-          <img src={logo} className="App-logo" alt="logo" />
-          <div>
-            {this.state.messages.map((msg,i) => {
-              return (<div key={i}>
-                <h3>{msg}
-                  </h3> </div>)
-            })}
-          </div> 
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="App-title"> Earn Chat </div>
+        <ChatWindow
+          messages={this.state.messages} />
 
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-        </a>
-        </header>
+        <UserModal
+          isVisible={this.state.name}
+          setName={this.setUsername} />
+        <InputWindow />
       </div>
     );
   }
